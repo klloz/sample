@@ -1,0 +1,23 @@
+<table>
+    <thead>
+    <tr>
+        <th>Uuid</th>
+        <th>Name</th>
+        <th>Count</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for lang in results.data %}
+        <tr>
+            <td>{{ lang.uuid }}</td>
+            <td>{{ lang.name }}</td>
+            <td>{{ lang.userCount }}</td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="4">No languages found.</td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
